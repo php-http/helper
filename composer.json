@@ -21,6 +21,11 @@
             "Http\\Adapter\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Http\\Adapter\\Tests\\": "tests/"
+        }
+    },
     "extra": {
         "branch-alias": {
             "dev-master": "0.1-dev"
