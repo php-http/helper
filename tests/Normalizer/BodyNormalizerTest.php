@@ -32,9 +32,9 @@ class BodyNormalizerTest extends \PHPUnit_Framework_TestCase
         $this->assertSame($body, BodyNormalizer::normalize($body, 'GET'));
     }
 
-    public function testNormalizeWithStream()
+    public function testNormalizeWithObject()
     {
-        $body = $this->getMock('Ivory\HttpAdapter\Message\Stream\StreamInterface');
+        $body = $this->getMock('stdClass');
 
         $this->assertSame($body, BodyNormalizer::normalize($body, 'GET'));
     }

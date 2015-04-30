@@ -21,8 +21,8 @@ class BodyNormalizer
     /**
      * Normalizes the body
      *
-     * @param callable|resource|string|StreamInterface $body
-     * @param string                                   $method
+     * @param callable|resource|string|object $body
+     * @param string                          $method
      *
      * @return string|null
      */
