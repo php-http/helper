@@ -19,7 +19,7 @@ class ProtocolVersionExtractor
     /**
      * Extracts the protocol version
      *
-     * @param array|string $headers
+     * @param string|string[] $headers
      *
      * @return string
      */

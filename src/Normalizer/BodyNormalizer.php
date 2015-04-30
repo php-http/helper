@@ -21,10 +21,10 @@ class BodyNormalizer
     /**
      * Normalizes the body
      *
-     * @param mixed  $body
-     * @param string $method
+     * @param callable|resource|string|StreamInterface $body
+     * @param string                                   $method
      *
-     * @return mixed
+     * @return string|null
      */
     public static function normalize($body, $method)
     {

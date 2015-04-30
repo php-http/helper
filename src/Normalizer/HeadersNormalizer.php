@@ -21,10 +21,10 @@ class HeadersNormalizer
     /**
      * Normalizes the headers
      *
-     * @param string|array $headers
-     * @param boolean      $associative TRUE if the headers should be an associative array else FALSE.
+     * @param string|string[] $headers
+     * @param boolean         $associative TRUE if the headers should be an associative array else FALSE.
      *
-     * @return array
+     * @return string[]
      */
     public static function normalize($headers, $associative = true)
     {

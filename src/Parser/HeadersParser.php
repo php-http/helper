@@ -21,9 +21,9 @@ class HeadersParser
     /**
      * Parses the headers
      *
-     * @param array|string $headers
+     * @param string|string[] $headers
      *
-     * @return array
+     * @return string[]
      */
     public static function parse($headers)
     {

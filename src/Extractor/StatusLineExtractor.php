@@ -21,7 +21,7 @@ class StatusLineExtractor
     /**
      * Extracts the status line
      *
-     * @param array|string $headers
+     * @param string|string[] $headers
      *
      * @return string
      */

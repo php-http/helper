@@ -19,7 +19,7 @@ class StatusCodeExtractor
     /**
      * Extracts the status code
      *
-     * @param array|string $headers
+     * @param string|string[] $headers
      *
      * @return integer
      */
