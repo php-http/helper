@@ -71,7 +71,7 @@ class HeaderNormalizer
     /**
      * Normalizes the header value
      *
-     * @param array|string $value
+     * @param string|string[] $value
      *
      * @return string
      */
