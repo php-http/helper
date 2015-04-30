@@ -12,17 +12,15 @@
 namespace Http\Adapter\Tests\Extractor;
 
 use Http\Adapter\Extractor\ProtocolVersionExtractor;
-use Http\Adapter\Tests\Parser\AbstractHeadersParserTest;
+use Http\Adapter\Tests\HeaderProvider;
 
 /**
- * Protocol version extractor test.
- *
  * @author GeLo <geloen.eric@gmail.com>
  */
-class ProtocolVersionExtractorTest extends AbstractHeadersParserTest
+class ProtocolVersionExtractorTest extends HeaderProvider
 {
     /**
-     * @dataProvider headersProvider
+     * @dataProvider headerProvider
      */
     public function testExtract($headers)
     {

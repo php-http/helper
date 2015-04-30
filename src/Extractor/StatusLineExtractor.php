@@ -11,7 +11,7 @@
 
 namespace Http\Adapter\Extractor;
 
-use Http\Adapter\Parser\HeadersParser;
+use Http\Adapter\Parser\HeaderParser;
 
 /**
  * @author GeLo <geloen.eric@gmail.com>
@@ -27,7 +27,7 @@ class StatusLineExtractor
      */
     public static function extract($headers)
     {
-        $headers = HeadersParser::parse($headers);
+        $headers = HeaderParser::parse($headers);
 
         return $headers[0];
     }

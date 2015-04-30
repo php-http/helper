@@ -12,14 +12,15 @@
 namespace Http\Adapter\Tests\Parser;
 
 use Http\Adapter\Parser\CookieParser;
+use Http\Adapter\Tests\CookieProvider;
 
 /**
  * @author GeLo <geloen.eric@gmail.com>
  */
-class CookieParserTest extends AbstractCookieParserTest
+class CookieParserTest extends CookieProvider
 {
     /**
-     * @dataProvider parseProvider
+     * @dataProvider cookieProvider
      */
     public function testParse($header, $name, $value, array $attributes = [])
     {

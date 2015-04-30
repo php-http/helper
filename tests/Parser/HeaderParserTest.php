@@ -11,15 +11,16 @@
 
 namespace Http\Adapter\Tests\Parser;
 
-use Http\Adapter\Parser\HeadersParser;
+use Http\Adapter\Parser\HeaderParser;
+use Http\Adapter\Tests\HeaderProvider;
 
 /**
  * @author GeLo <geloen.eric@gmail.com>
  */
-class HeadersParserTest extends AbstractHeadersParserTest
+class HeaderParserTest extends HeaderProvider
 {
     /**
-     * @dataProvider headersProvider
+     * @dataProvider headerProvider
      */
     public function testParse($headers)
     {
@@ -29,7 +30,7 @@ class HeadersParserTest extends AbstractHeadersParserTest
                 'foo: bar',
                 'baz: bat, ban',
             ],
-            HeadersParser::parse($headers)
+            HeaderParser::parse($headers)
         );
     }
 }

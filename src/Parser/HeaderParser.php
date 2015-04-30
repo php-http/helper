@@ -11,12 +11,12 @@
 
 namespace Http\Adapter\Parser;
 
-use Http\Adapter\Normalizer\HeadersNormalizer;
+use Http\Adapter\Normalizer\HeaderNormalizer;
 
 /**
  * @author GeLo <geloen.eric@gmail.com>
  */
-class HeadersParser
+class HeaderParser
 {
     /**
      * Parses the headers
@@ -36,7 +36,7 @@ class HeadersParser
         $parsedHeaders = [];
 
         foreach ($headers as $name => $value) {
-            $value = HeadersNormalizer::normalizeHeaderValue($value);
+            $value = HeaderNormalizer::normalizeHeaderValue($value);
 
             if (is_int($name)) {
                 if (strpos($value, 'HTTP/') === 0) {

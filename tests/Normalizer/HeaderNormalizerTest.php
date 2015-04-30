@@ -11,19 +11,18 @@
 
 namespace Http\Adapter\Tests\Normalizer;
 
-use Http\Adapter\Normalizer\HeadersNormalizer;
+use Http\Adapter\Normalizer\HeaderNormalizer;
 
 /**
- *
  * @author GeLo <geloen.eric@gmail.com>
  */
-class HeadersNormalizerTest extends \PHPUnit_Framework_TestCase
+class HeaderNormalizerTest extends \PHPUnit_Framework_TestCase
 {
     public function testNormalizeAsAssociativeWithStringHeaders()
     {
         $this->assertSame(
             ['fOo' => 'bar, bot', 'Baz' => 'bat, ban', 'Date' => 'Fri, 15 aug 2014 12:34:56 UTC'],
-            HeadersNormalizer::normalize($this->getStringHeaders())
+            HeaderNormalizer::normalize($this->getStringHeaders())
         );
     }
 
@@ -31,7 +30,7 @@ class HeadersNormalizerTest extends \PHPUnit_Framework_TestCase
     {
         $this->assertSame(
             ['fOo: bar, bot', 'Baz: bat, ban', 'Date: Fri, 15 aug 2014 12:34:56 UTC'],
-            HeadersNormalizer::normalize($this->getStringHeaders(), false)
+            HeaderNormalizer::normalize($this->getStringHeaders(), false)
         );
     }
 
@@ -39,7 +38,7 @@ class HeadersNormalizerTest extends \PHPUnit_Framework_TestCase
     {
         $this->assertSame(
             ['fOo' => 'bar, bot', 'Baz' => 'bat, ban', 'Date' => 'Fri, 15 aug 2014 12:34:56 UTC'],
-            HeadersNormalizer::normalize($this->getSubAssociativeHeaders())
+            HeaderNormalizer::normalize($this->getSubAssociativeHeaders())
         );
     }
 
@@ -47,7 +46,7 @@ class HeadersNormalizerTest extends \PHPUnit_Framework_TestCase
     {
         $this->assertSame(
             ['fOo' => 'bar, bot', 'Baz' => 'bat, ban', 'Date' => 'Fri, 15 aug 2014 12:34:56 UTC'],
-            HeadersNormalizer::normalize($this->getAssociativeHeaders())
+            HeaderNormalizer::normalize($this->getAssociativeHeaders())
         );
     }
 
@@ -55,23 +54,23 @@ class HeadersNormalizerTest extends \PHPUnit_Framework_TestCase
     {
         $this->assertSame(
             ['fOo: bar, bot', 'Baz: bat, ban', 'Date: Fri, 15 aug 2014 12:34:56 UTC'],
-            HeadersNormalizer::normalize($this->getIndexedHeaders(), false)
+            HeaderNormalizer::normalize($this->getIndexedHeaders(), false)
         );
     }
 
     public function testNormalizeHeaderName()
     {
-        $this->assertSame('FoO', HeadersNormalizer::normalizeHeaderName(' FoO '));
+        $this->assertSame('FoO', HeaderNormalizer::normalizeHeaderName(' FoO '));
     }
 
     public function testNormalizeHeaderValueWithString()
     {
-        $this->assertSame('foo, bar', HeadersNormalizer::normalizeHeaderValue(' foo , bar '));
+        $this->assertSame('foo, bar', HeaderNormalizer::normalizeHeaderValue(' foo , bar '));
     }
 
     public function testNormalizeHeaderValueWithArray()
     {
-        $this->assertSame('foo, bar', HeadersNormalizer::normalizeHeaderValue([' foo ', ' bar ']));
+        $this->assertSame('foo, bar', HeaderNormalizer::normalizeHeaderValue([' foo ', ' bar ']));
     }
 
     /**

@@ -9,19 +9,19 @@
  * file that was distributed with this source code.
  */
 
-namespace Http\Adapter\Tests\Parser;
+namespace Http\Adapter\Tests;
 
 /**
  * @author GeLo <geloen.eric@gmail.com>
  */
-abstract class AbstractCookieParserTest extends \PHPUnit_Framework_TestCase
+abstract class CookieProvider extends \PHPUnit_Framework_TestCase
 {
     /**
-     * Provides data to the parser
+     * Provides cookies
      *
      * @return array
      */
-    public function parseProvider()
+    public function cookieProvider()
     {
         return [
             ['', null, null],

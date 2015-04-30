@@ -9,21 +9,21 @@
  * file that was distributed with this source code.
  */
 
-namespace Http\Adapter\Tests\Parser;
+namespace Http\Adapter\Tests;
 
 /**
  * @author GeLo <geloen.eric@gmail.com>
  */
-abstract class AbstractHeadersParserTest extends \PHPUnit_Framework_TestCase
+abstract class HeaderProvider extends \PHPUnit_Framework_TestCase
 {
     /**
-     * Provides data to the parser
+     * Provides headers
      *
      * @return array
      */
-    public function headersProvider()
+    public function headerProvider()
     {
-        return array_merge($this->simpleHeadersProvider(), $this->redirectHeadersProvider());
+        return array_merge($this->simpleHeaderProvider(), $this->redirectHeaderProvider());
     }
 
     /**
@@ -31,7 +31,7 @@ abstract class AbstractHeadersParserTest extends \PHPUnit_Framework_TestCase
      *
      * @return array
      */
-    public function simpleHeadersProvider()
+    public function simpleHeaderProvider()
     {
         return [
             [$this->getStringHeaders()],
@@ -46,7 +46,7 @@ abstract class AbstractHeadersParserTest extends \PHPUnit_Framework_TestCase
      *
      * @return array
      */
-    public function redirectHeadersProvider()
+    public function redirectHeaderProvider()
     {
         return [
             [$this->getRedirectStringHeaders()],

@@ -12,15 +12,15 @@
 namespace Http\Adapter\Tests\Extractor;
 
 use Http\Adapter\Extractor\StatusCodeExtractor;
-use Http\Adapter\Tests\Parser\AbstractHeadersParserTest;
+use Http\Adapter\Tests\HeaderProvider;
 
 /**
  * @author GeLo <geloen.eric@gmail.com>
  */
-class StatusCodeExtractorTest extends AbstractHeadersParserTest
+class StatusCodeExtractorTest extends HeaderProvider
 {
     /**
-     * @dataProvider headersProvider
+     * @dataProvider headerProvider
      */
     public function testExtract($headers)
     {
