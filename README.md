@@ -22,6 +22,8 @@ $ composer require php-http/adapter-helper
 
 ## Usage
 
+This repository contains some helper classes used in HTTP Adapters.
+
 
 ## Testing
 
