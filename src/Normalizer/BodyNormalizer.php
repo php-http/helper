@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Http Adapter package.
+ * This file is part of the Http Helper package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Http\Adapter\Normalizer;
+namespace Http\Helper\Normalizer;
 
-use Http\Adapter\Message\RequestInterface;
+use Http\Helper\Message\RequestInterface;
 
 /**
  * @author GeLo <geloen.eric@gmail.com>

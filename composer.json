@@ -1,13 +1,17 @@
 {
-    "name": "php-http/adapter-helper",
-    "description": "Internal helper classes for HTTP adapters",
+    "name": "php-http/helper",
+    "description": "Helper classes for HTTP related data",
     "license": "MIT",
-    "keywords": ["http", "adapter", "helper"],
+    "keywords": ["http", "helper"],
     "homepage": "http://php-http.org",
     "authors": [
         {
             "name": "Eric GELOEN",
             "email": "geloen.eric@gmail.com"
+        },
+        {
+            "name": "Márk Sági-Kazár",
+            "email": "mark.sagikazar@gmail.com"
         }
     ],
     "require": {
@@ -18,12 +22,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Http\\Adapter\\": "src/"
+            "Http\\Helper\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Http\\Adapter\\Tests\\": "tests/"
+            "Http\\Helper\\Tests\\": "tests/"
         }
     },
     "extra": {

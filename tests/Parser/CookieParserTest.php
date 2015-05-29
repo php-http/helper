@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Http Adapter package.
+ * This file is part of the Http Helper package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Http\Adapter\Tests\Parser;
+namespace Http\Helper\Tests\Parser;
 
-use Http\Adapter\Parser\CookieParser;
-use Http\Adapter\Tests\CookieProvider;
+use Http\Helper\Parser\CookieParser;
+use Http\Helper\Tests\CookieProvider;
 
 /**
  * @author GeLo <geloen.eric@gmail.com>
