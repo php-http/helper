@@ -7,8 +7,17 @@
 [![Quality Score](https://img.shields.io/scrutinizer/g/php-http/helper.svg?style=flat-square)](https://scrutinizer-ci.com/g/php-http/helper)
 [![Total Downloads](https://img.shields.io/packagist/dt/php-http/helper.svg?style=flat-square)](https://packagist.org/packages/php-http/helper)
 
-**Helper classes for HTTP related data.**
+**Helper classes for PSR-7 implementors.**
 
+# NOT READY
+
+This repository is not ready for use. If you think about using this, please open an issue on this repository to discuss how to proceed.
+
+Things that could change:
+
+* Move to instantiated classes instead of static methods
+* Code refactorings
+* Different namespace and repository name
 
 ## Install
 
